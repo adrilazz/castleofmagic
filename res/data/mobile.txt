@@ -1,0 +1,57 @@
+Mobile ODMarine
+Name Off-Duty Marine
+Description 
+An off duty marine.
+END
+Strategy G
+Location BC-CampSquare
+
+//OUR MOBILE//
+Mobile
+Name Damian
+Description 
+Short scared man with gray hair and a hat.
+END
+Strategy M 
+Location MW
+
+Mobile
+Name Ruth
+Description
+Guardian of gate, woman wearing a black cape and hood holding a spade.
+END
+Strategy M 
+Location GE
+
+Mobile
+Name Elden
+Description
+One of the twins, has red hair and is the tallest of both, protects the staircase
+END
+Strategy M 
+END
+Location SE
+
+Mobile
+Name Sheldon
+Description
+The other twin, has red hair and is the short one, protects the staircase next to his brother
+Strategy M 
+END
+Location SE
+
+Mobile
+Name Gunter
+Description 
+A man with fair skin wearing a purple jumper with yellow pants and hiding behind what seems to be a weapon
+Strategy M 
+END
+Location DD
+
+Mobile
+Name Ludwig
+Description 
+a blonde middle aged man wearing a suit
+Strategy M 
+END
+Location SD

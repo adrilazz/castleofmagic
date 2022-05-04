@@ -1,0 +1,935 @@
+
+Room BC-LandingPad
+Name Base Camp: Landing Pad
+Description 
+Ships fly in low before disgorging their 
+small contingent of equipment, supplies, and more rarely, 
+people. The landing pads are surrounded with constantly 
+swirling dust, driving most new arrivals northward into the 
+shelter of the walled camp amidst the featureless wastes.
+END
+
+Mobile
+Name Rover
+Description 
+A mechanical dog.
+END
+Strategy M Rover Woofs!
+Location BC-LandingPad
+
+Mobile
+Name Sand Cat
+Description 
+Not exactly a feline, but this sleek, 
+hard to catch creature is similar to a housecat in shape. 
+Also, it has huge digging claws. Weird.
+END
+Strategy M Sand Cat burrows into the ground, leaving a raised trail in the earth.
+Location BC-LandingPad
+
+Stat Sand_Cat Strength 2
+Stat Sand_Cat Agility 10
+
+Room BC-CampSquare
+Name Base Camp: Camp Square
+Description 
+The camp bustles with motion. Here 
+inside the walls the storm of wind and dust outside is 
+subdued, but not entirely abated. If one wanted to get out 
+of the blowing grit, they'd likely need to head inside the 
+sturdy pre-fabricated buildings that fill the camp. Few 
+people cross the square unless traveling between the Landing 
+Pads to the south, the barracks to the west, the armory to 
+the east, or the camp's gates to the north.
+END
+
+Exit BC-LandingPad n BC-CampSquare
+Exit BC-CampSquare s BC-LandingPad
+
+Weapon 
+Name Laser Pistol
+Description 
+A clunky old laser pistol; reliable, but ugly.
+END
+Level 1
+Damage 3
+Location BC-CampSquare
+
+Mobile
+Name Off-Duty Marine
+Description 
+An off duty marine.
+END
+Strategy G
+Location BC-CampSquare
+
+Room BC-CampGate
+Name Base Camp: Camp Gate
+Description 
+Guards and emplaced guns keep the camp safe
+from outside threats, but once you walk north into the wastes, 
+you're on your own. the core of the mercenary camp lies deeper 
+behind the walls, south.
+END
+
+Exit BC-CampSquare n BC-CampGate
+Exit BC-CampGate s BC-LandingPad
+
+Room BC
+Name Base Camp
+Description 
+You shouldn't be seeing this!
+END
+
+ADD BC BC-LandingPad
+ADD BC BC-CampSquare
+ADD BC BC-CampGate
+
+
+Room WorldEntity
+Name OverachingWorld
+Description 
+All locations in the world are held here.
+END
+
+ADD WorldEntity BC
+
+Room BC-LandingPadBunker
+Name Base Camp: Landing Pad Bunker
+Description 
+A ladder in the middle of the room. The walls are made of steel, 
+and there are storage crates all around you.
+END
+
+Exit BC-LandingPad d BC-LandingPadBunker
+Exit BC-LandingPadBunker u BC-LandingPad
+
+Room BC-CampSquareBunker
+Name Base Camp: Camp Square Bunker
+Description 
+A ladder in the middle of the room. Four officer desks in each corner of the room. 
+A visual display of the surrounding waste lands glows from a monitor hanging on the west wall. 
+All the lifeforms and vehicles in the area can be seen there. The walls are made of steel.
+END
+
+Exit BC-CampSquare d BC-CampSquareBunker
+Exit BC-CampSquareBunker u BC-CampSquare
+
+GearContainer 
+Name Captain's Cabinet
+Description 
+(The captain's gun cabinet.)
+END
+MaxSize 5
+canCarry false
+Location BC-CampSquareBunker
+
+Weapon 
+Name Laser Rifle
+Description 
+(A brand new laser rifle. It is a little heavy, but packs a punch)
+END
+Level 1
+Damage 6
+Location Captain's_Cabinet
+
+Weapon 
+Name Plasma Gun
+Description 
+(A brand new plasma gun. It is unwieldy, but also packs a whallop.)
+END
+Level 2
+Damage 9
+Location Captain's_Cabinet
+
+Weapon 
+Name Vibro-Blade
+Description 
+(A sword whose edge hums with slicing power, yearning for a Dreadnaught's gauntlets.)
+END
+Level 3
+Damage 15
+Location Captain's_Cabinet
+
+Orb 
+Name Life Orb
+Description 
+(A health orb, adds 5 hit points when used. Regenerates every 10 seconds. Dropping it would be a bad idea.)
+END
+HealthPoints 5
+Location Captain's_Cabinet
+
+Orb 
+Name Long Life Orb
+Description 
+(A health orb, adds 10 hit points when used. Regenerates every 10 seconds. Dropping it would be a bad idea.)
+END
+HealthPoints 10
+Location Captain's_Cabinet
+
+Room BC-CampSquareBunkerEast
+Name Base Camp: Camp Square Bunker East
+Description 
+Storage crates all around.
+END
+
+Exit BC-CampSquareBunker e BC-CampSquareBunkerEast
+Exit BC-CampSquareBunkerEast w BC-CampSquareBunker
+
+Exit BC-CampSquareBunker s BC-LandingPadBunker
+Exit BC-LandingPadBunker n BC-CampSquareBunker
+
+
+Room BC-CampGateBunker
+Name Base Camp: Camp Gate Bunker
+Description 
+A ladder in the middle of the room. The walls are made of steel, 
+and there are storage crates all around you.
+END
+
+Exit BC-CampSquareBunker n BC-CampGateBunker
+Exit BC-CampGateBunker s BC-CampSquareBunker
+
+Exit BC-CampGate d BC-CampGateBunker
+Exit BC-CampGateBunker u BC-CampGate
+
+ADD BC BC-LandingPadBunker
+ADD BC BC-CampSquareBunker
+ADD BC BC-CampSquareBunkerEast
+ADD BC BC-CampGateBunker
+
+
+Room WL-NearWastes
+Name Wastelands: The Near Wastes
+Description 
+The tamest of the wastelands, this area is high 
+in traffic from the mercenary camp, and any larger fauna tend to 
+be dealt with swiftly. Only the occasional giant scorpion can be 
+found crawling around, attacking people for sustenance - And all 
+the juicy water they carry.
+END
+
+Exit BC-CampGate n WL-NearWastes
+Exit WL-NearWastes s BC-CampGate
+
+Mobile
+Name Small Scorpion
+Description 
+A small scorpion the likes of which you've likely seen before.
+END
+Strategy PA
+Location WL-NearWastes
+Stat Small_Scorpion Strength 2
+Stat Small_Scorpion Agility 7
+Stat Small_Scorpion MAXHITPOINTS 15
+
+Room WL-Wasteland
+Name Wastelands: The Wasteland
+Description 
+A vast expanse of dirt and dust, and little else. These 
+rolling hills are blasted by sand - but, plenty more blowing in 
+seems to keep the general amount of grit constant. The distant 
+camp to the south is a mere shadow, and a deep canyon falls away 
+to the west. The wastes grow deeper north, and a faint shape looms 
+in the haze to the east.
+END
+
+Exit WL-NearWastes n WL-Wasteland
+Exit WL-Wasteland s WL-NearWastes
+
+
+Room WL-CrashSite
+Name Wastelands: Crash Site
+Description 
+A massive cargo-hauling vessel has crashed into the dunes here. 
+It has a large central spine which connects the forward bridge and rear 
+engines pods together, both of which tower a half dozen stories tall. 
+Hanging from the spine are enormous cargo containers the size of small 
+buildings. one pod has a gaping crack in the side.
+END
+
+Exit WL-Wasteland e WL-CrashSite
+Exit WL-CrashSite w WL-Wasteland
+
+Room WL-DeepWastes
+Name Wastelands: The Deep Wastes
+Description 
+The terrible blowing winds that howl across the wastes are all 
+the worse here. Giant rock formations jut skyward, eerily symmetrical, 
+but their shapes do nothing to abate the winds - Possibly even amplifying 
+it as dust blows between the pillars.
+END
+
+Exit WL-Wasteland n WL-DeepWastes
+Exit WL-DeepWastes s WL-Wasteland
+
+Room WL-CaveMouth
+Name Wastelands: Cave Mouth
+Description 
+The land almost seems to fall away walking west from the near 
+wastes, descending into a miles-wide bowl in the earth. The bowl seems to 
+pour north into a deep canyon carved out by a long-forgotten river, but 
+tucked away in the bowl's western ridge is a gaping cave mouth, pitch black 
+within, that howls in the passing winds.
+END
+
+Exit WL-NearWastes w WL-CaveMouth
+Exit WL-CaveMouth e WL-NearWastes
+
+Room WL-Cave
+Name Wastelands: Cave
+Description 
+The land almost seems to fall away walking west from the near 
+wastes, descending into a miles-wide bowl in the earth. The bowl seems to 
+pour north into a deep canyon carved out by a long-forgotten river, but 
+tucked away in the bowl's western ridge is a gaping cave mouth, pitch black 
+within, that howls in the passing winds.
+END
+
+Exit WL-CaveMouth w WL-Cave
+Exit WL-Cave e WL-CaveMouth
+
+Armor 
+Name Assault SNO Cuirass
+Description 
+(Despite it's requirements to withstand orbital strikes, this armor appears to 
+be a composite, made out of strange glowing rectangles connected by dotted lines 
+in some technological pattern.)
+END
+Level 3
+Type H
+Location WL-Cave
+
+Mobile
+Name Giant Scorpion
+Description 
+A giant scorpion the likes of which the world has never seen.
+END
+Strategy PA
+Location WL-Cave
+Stat Giant_Scorpion Strength 40
+Stat Giant_Scorpion Agility 3
+
+Room WL-Canyon
+Name Wastelands: Canyon
+Description 
+A deep canyon runs through the wasteland, travelling from a depression 
+in the south to a massive cavern in the north.
+END
+
+Exit WL-CaveMouth n WL-Canyon
+Exit WL-Canyon s WL-CaveMouth
+
+Mobile
+Name Medium Scorpion
+Description 
+A medium scorpion the likes of which you've likely seen before.
+END
+Strategy PA
+Location WL-Canyon
+Stat Medium_Scorpion Strength 3
+Stat Medium_Scorpion Agility 8
+Stat Medium_Scorpion MAXHITPOINTS 16
+
+Room WL-Cavern
+Name Wastelands: Cavern
+Description 
+A deep canyon runs through the wasteland, travelling from a depression 
+in the south to a massive cavern in the north.
+END
+
+Exit WL-Canyon n WL-Cavern
+Exit WL-Cavern s WL-Canyon
+
+Room WL-Lookout
+Name Wastelands: Lookout
+Description 
+This high spire allows one to see out over the distant wastes, and 
+the massive canyon to the south. Far north, craggy mountains are visible 
+through the haze, and a strange, organic-lookign structure nestles among them. 
+Far to the east, some sort of crashed vessel can be seen in the sands.
+END
+
+Exit WL-Lookout d WL-Cavern
+Exit WL-Cavern u WL-Lookout
+
+Exit WL-Lookout e WL-DeepWastes
+Exit WL-DeepWastes w WL-Lookout
+
+Room WL
+Name The wasteland environment room.
+Description 
+You shouldn't be seeing this!
+END
+
+ADD WL WL-NearWastes
+ADD WL WL-Wasteland
+ADD WL WL-CrashSite
+ADD WL WL-DeepWastes
+ADD WL WL-CaveMouth
+ADD WL WL-Cave
+ADD WL WL-Canyon
+ADD WL WL-Cavern
+ADD WL WL-Lookout
+
+ADD WorldEntity WL
+
+Room CS-BrokenCargoPod
+Name Crashed Ship: Broken Cargo Pod
+Description 
+Inside of the cargo container, the walls are stripped bare - 
+Only fitting, given how easy it was to get in here. A seemingly long-broken 
+freight elevator leads up to the central corridor in the vessel's spine,
+ however the gantry around the broken elevator could be climbed.
+END
+
+Exit WL-CrashSite e CS-BrokenCargoPod
+Exit CS-BrokenCargoPod w WL-CrashSite
+
+Weapon 
+Name Laser Rifle
+Description 
+(A bruised and beaten laser rifle which has seen its share of combat.)
+END
+Level 1
+Damage 6
+Location CS-BrokenCargoPod
+
+Weapon 
+Name Laser Cannon
+Description 
+(A brand new laser cannon with just a little dust on the lens.)
+END
+Level 3
+Damage 12
+Location CS-BrokenCargoPod
+
+Weapon 
+Name Plasma McCannon
+Description 
+(An inductive weapon which directly proves your enemies 
+to be a pile of ash, beyond contradiction.)
+END
+Level 5
+Damage 25
+Location CS-BrokenCargoPod
+
+Armor 
+Name Flak Vest
+Description 
+A sturdy vest meant to protect the wearer's torso.
+END
+Level 2
+Type M
+Location CS-BrokenCargoPod
+
+Armor 
+Name Regolith Suit
+Description 
+Armor made of the planet's processed regolith (very strong).
+END
+Level 2
+Type H
+Location CS-BrokenCargoPod
+
+Armor 
+Name Tuxedo T-Shirt and Jeans
+Description 
+Tuxedo T-Shirt and Jeans (even your Mom won't think your funny).
+END
+Level 1
+Type L
+Location CS-BrokenCargoPod
+
+Mobile
+Name Lurker
+Description 
+A monstrous spider-like creature, whose fangs drip acid.
+END
+Strategy PA
+Location CS-BrokenCargoPod
+Stat Lurker Strength 6
+Stat Lurker Agility 6
+Stat Lurker MAXHITPOINTS 25
+
+Room CS-NorthSpinalCorridor
+Name Crashed Ship: North Spinal Corridor
+Description 
+Once space-worthy, the corridor is now anything but. Large gashes 
+and tears in the cielings allow bands of light to drift into the corridors, 
+filled with sand. On either side of the hall large freight elevators lead 
+down into the cargo pods. The hall continues south towards the engines, and 
+north eventually comes to the pried-open doors of the bridge-module.
+END
+
+Exit CS-BrokenCargoPod u CS-NorthSpinalCorridor
+Exit CS-NorthSpinalCorridor d CS-BrokenCargoPod
+
+Room CS-SouthSpinalCorridor
+Name Crashed Ship: South Spinal Corridor
+Description 
+Once space-worthy, the corridor is now anything but. Large gashes 
+and tears in the cielings allow bands of light to drift into the corridors, 
+filled with sand. On either side of the hall large freight elevators lead 
+down into the cargo pods. The hall continues south until it hits a sealed 
+door to the engine pods, and continues north.
+END
+
+Exit CS-SouthSpinalCorridor n CS-NorthSpinalCorridor
+Exit CS-NorthSpinalCorridor s CS-SouthSpinalCorridor
+
+Room CS-CargoPodNest
+Name Crashed Ship: Cargo Pod Nest
+Description 
+Once space-worthy, the corridor is now anything but. Large gashes 
+and tears in the cielings allow bands of light to drift into the corridors, 
+filled with sand. On either side of the hall large freight elevators lead 
+down into the cargo pods. The hall continues south until it hits a sealed 
+door to the engine pods, and continues north.
+END
+
+Exit CS-SouthSpinalCorridor d CS-CargoPodNest
+Exit CS-CargoPodNest u CS-SouthSpinalCorridor
+
+Room CS
+Name The Crashed Ship environment room.
+Description 
+You shouldn't be seeing this!
+END
+
+ADD CS CS-BrokenCargoPod
+ADD CS CS-NorthSpinalCorridor
+ADD CS CS-SouthSpinalCorridor
+ADD CS CS-CargoPodNest
+
+ADD WorldEntity CS
+
+Room TM-Foothills
+Name The Mountains: Foothills
+Description 
+These foothills mark the split between the sandy wastes and the 
+craggy mountains of the north.
+END
+
+Exit WL-DeepWastes n TM-Foothills
+Exit TM-Foothills s WL-DeepWastes
+
+Room TM-TreacherousTrail
+Name The Mountains: Treacherous Trail
+Description 
+An unreliable path winds up between the crags of the hills. 
+East, jagged mountain peaks rise up and make passage treacherous. A wide 
+highland plains spreads out to the west.
+END
+
+Exit TM-TreacherousTrail s TM-Foothills
+Exit TM-Foothills n TM-TreacherousTrail
+
+Room TM-MazeCannyonSW
+Name The Mountains: Maze-Like Canyon (SW Corner)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+The only safe path out is to the West.	
+END
+
+Exit TM-TreacherousTrail e TM-MazeCannyonSW
+Exit TM-MazeCannyonSW w TM-TreacherousTrail
+
+Room TM-MazeCannyonW
+Name The Mountains: Maze-Like Canyon (W Edge)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+You can see a trail leading up the back of a mountain to the north, but aren't sure how to get there.
+END
+
+Exit TM-MazeCannyonW d TM-MazeCannyonSW
+
+Room TM-MazeCannyonNW
+Name The Mountains: Maze-Like Canyon (NW Corner)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+A trail leads up the side of a mountain here. A long slope leads south, 
+and actually seems to go that way. A simple trail to the east seems
+like it might not be decieving you as well.
+END
+
+Exit TM-MazeCannyonNW d TM-MazeCannyonSW
+
+Room TM-MazeCannyonN
+Name The Mountains: Maze-Like Canyon (N Edge)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+END
+
+Exit TM-MazeCannyonN d TM-MazeCannyonSW
+
+Room TM-MazeCannyonC
+Name The Mountains: Maze-Like Canyon (Center)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+This is possibly the most 
+confusing nexus of trails and pathways you have ever seen. GPS gear tends to 
+give up and explode, while maps burst into flame without warning.
+END
+
+Exit TM-MazeCannyonC d TM-MazeCannyonSW
+
+Room TM-MazeCannyonS
+Name The Mountains: Maze-Like Canyon (S Edge)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+END
+
+Exit TM-MazeCannyonS d TM-MazeCannyonSW
+
+Room TM-MazeCannyonSE
+Name The Mountains: Maze-Like Canyon (SE Corner)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+END
+
+Exit TM-MazeCannyonSE d TM-MazeCannyonSW
+
+Room TM-MazeCannyonE
+Name The Mountains: Maze-Like Canyon (E Edge)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+END
+
+Exit TM-MazeCannyonE d TM-MazeCannyonSW
+
+Room TM-MazeCannyonNE
+Name The Mountains: Maze-Like Canyon (NE Corner)
+Description 
+[WARNING: Exits in this maze do not seem to connect logically! If at any time 
+you become hopelessly lost, type 'Down' to return to this room.] \n \n
+Twisty little canyons all alike lead off in many directions, winding 
+over and under each other to make your sense of direction unreliable.	\n
+END
+
+Exit TM-MazeCannyonNE d TM-MazeCannyonSW
+
+Exit TM-MazeCannyonSW n TM-MazeCannyonW
+Exit TM-MazeCannyonSW e TM-MazeCannyonC
+
+Exit TM-MazeCannyonW w TM-MazeCannyonE
+Exit TM-MazeCannyonW e TM-MazeCannyonS
+
+Exit TM-MazeCannyonNW s TM-MazeCannyonW
+Exit TM-MazeCannyonNW e TM-MazeCannyonN
+
+Exit TM-MazeCannyonN n TM-MazeCannyonNE
+Exit TM-MazeCannyonN s TM-MazeCannyonC
+
+Exit TM-MazeCannyonC n TM-MazeCannyonE
+Exit TM-MazeCannyonC e TM-MazeCannyonS
+Exit TM-MazeCannyonC s TM-MazeCannyonW
+Exit TM-MazeCannyonC w TM-MazeCannyonN
+
+Exit TM-MazeCannyonS e TM-MazeCannyonSW
+Exit TM-MazeCannyonS w TM-MazeCannyonSE
+Exit TM-MazeCannyonS s TM-MazeCannyonSE
+
+Exit TM-MazeCannyonSE w TM-MazeCannyonS
+Exit TM-MazeCannyonSE n TM-MazeCannyonE
+
+Exit TM-MazeCannyonE n TM-MazeCannyonNE
+Exit TM-MazeCannyonE w TM-MazeCannyonC
+
+Exit TM-MazeCannyonNE s TM-MazeCannyonN
+Exit TM-MazeCannyonNE n TM-MazeCannyonSE
+Exit TM-MazeCannyonNE e TM-MazeCannyonNW
+
+
+Room TM
+Name The Maze environment room.
+Description 
+You shouldn't be seeing this!
+END
+
+ADD TM TM-MazeCannyonN
+ADD TM TM-MazeCannyonNE
+ADD TM TM-MazeCannyonE
+ADD TM TM-MazeCannyonSE
+ADD TM TM-MazeCannyonS
+ADD TM TM-MazeCannyonSW
+ADD TM TM-MazeCannyonW
+ADD TM TM-MazeCannyonNW
+ADD TM TM-MazeCannyonC
+ADD TM TM-Foothills
+ADD TM TM-TreacherousTrail
+
+ADD WorldEntity TM
+
+
+Room AH-Approach
+Name Alien Hive: Approach
+Description 
+A squat, organic structure lurks in the distance. A low plain 
+spreads out across the highlands between the crags of the foothills and 
+the distant hive. Tree-sized, barbed spines jut up from the landscape and 
+seem to pulse slowly.
+END
+
+Exit TM-TreacherousTrail w AH-Approach
+Exit AH-Approach e TM-TreacherousTrail
+
+Mobile
+Name Hive Scout
+Description 
+A strange creature, like an eight-legged dog with 
+dozens of solid red eyes, and chitinous body-segmets 
+that turn into a whiplike tail.
+END
+Strategy PA
+Location AH-Approach
+Stat Hive_Scout Strength 4
+Stat Hive_Scout Agility 8
+Stat Hive_Scout MAXHITPOINTS 25
+Stat Hive_Scout TOUGHNESS 3
+
+Mobile
+Name Hive Drone
+Description 
+A strange creature, like an eight-legged dog with 
+a white face, dozens of solid red eyes, and chitinous body-segmets 
+that turn into a whiplike tail.
+END
+Strategy PA
+Location AH-Approach
+Stat Hive_Drone Strength 4
+Stat Hive_Drone Agility 8
+Stat Hive_Drone MAXHITPOINTS 15
+Stat Hive_Drone TOUGHNESS 3
+
+Room AH-Perimeter
+Name Alien Hive: Perimeter
+Description 
+Orifices of various sizes on the south side of this strange, fleshy 
+structure seem to pulse as if the structure itself were breathing. This close 
+to the hive, twisted creatures which serve as guards are bound to notice unwary 
+mercenaries. The open land to the east, dotted with alien spires, leads back 
+towards the mountains. 
+END
+
+Exit AH-Perimeter e AH-Approach
+Exit AH-Approach w AH-Perimeter
+
+Mobile
+Name Hive Guardian
+Description 
+A strange armored beast, like a six-legged rhino with long talons and angry teeth.
+END
+Strategy A
+Location AH-Perimeter
+Stat Hive_Guardian Strength 9
+Stat Hive_Guardian Agility 6
+Stat Hive_Guardian MAXHITPOINTS 40
+Stat Hive_Guardian TOUGHNESS 7
+
+Mobile
+Name Hive Worker
+Description 
+A strange insectile creature with the body of a gorilla and thick armored plates moves about.
+END
+Strategy M A Hive Worker uses it's mandibles to gnaw a thick chunk of organic material out of the wall, and take it deeper into the hive before returning.
+Location AH-Perimeter
+Stat Hive_Guardian Strength 9
+Stat Hive_Guardian Agility 2
+Stat Hive_Guardian MAXHITPOINTS 40
+
+Room AH-Cathedral
+Name Alien Hive: Cathedral
+Description 
+A vaulted cieling rises overhead, ventricles and valves shunting air 
+through the hive's depths, the alls themselves pulsating like a living thing. 
+Many little tunnels pass south out of the hive and a wide, dark passage leads 
+into the rocky heart of the Hive.
+END
+
+Exit AH-Perimeter n AH-Cathedral
+Exit AH-Cathedral s AH-Perimeter
+
+Room AH-BroodChamber
+Name Alien Hive: Brood Chamber
+Description 
+Grotesque egg-like sacks of fleshy membranes are spread all over 
+this moist, humid chamber. They are in various sizes, likely representing 
+the wide variety of creatures. A smooth tunnel, ground covered in slime, 
+descends to the west, while air whistles through a small gap to the east.
+END
+
+Exit AH-BroodChamber s AH-Cathedral
+Exit AH-Cathedral n AH-BroodChamber
+
+Room AH-Queen'sLair
+Name Alien Hive: Queen's Lair
+Description 
+Strange organelles and unusual organic formations coat the dripping 
+walls as the passage descends into the earth itself. From within comes a deep,
+ ominous chittering, and signs of an immense, scaly-hided monster fill this 
+fortified chamber.
+END
+
+Exit AH-BroodChamber w AH-Queen'sLair
+Exit AH-Queen'sLair e AH-BroodChamber
+
+Weapon 
+Name Malign Pattern
+Description 
+(While initially appearing to be a sheet of paper with glittering silicon traces, 
+A Dreadnaught with enough strength could bend this simple paper into an epic 
+Origami Vibro-Blade.)
+END
+Level 5
+Damage 35
+Location AH-Queen'sLair
+
+Mobile
+Name Alien Queen
+Description 
+This enormous creature has a bulbous body and thousands of legs, and a vaguely face-like 
+construct filled with fangs and glittering ruby eyes. and often leaves dripping eggs in 
+it's wake as it meanders through it's deep chamber.
+END
+Strategy A
+Location AH-Queen'sLair
+Stat Alien_Queen Strength 16
+Stat Alien_Queen Agility 6
+Stat Alien_Queen MAXHITPOINTS 200
+Stat Alien_Queen TOUGHNESS 8
+
+
+Room AH-HiddenTrail
+Name Alien Hive: Hidden Trail
+Description 
+The wind howls around you on this narrow pathway, which leads up through 
+the canyons and rock formations of the mountains, towards a small craggy opening 
+in an enormous organic structure. The crag leads west into the Hive, while the 
+trail leads back down the mountain.
+END
+
+Exit AH-BroodChamber e AH-HiddenTrail
+Exit AH-HiddenTrail w AH-BroodChamber
+
+Exit AH-HiddenTrail d TM-MazeCannyonNW
+Exit TM-MazeCannyonNW u AH-HiddenTrail
+
+
+Room AH-BroodChamberUnderground
+Name Alien Hive: Brood Chamber Underground
+Description 
+Smaller creatures, possibly runts from the nursery above, scurry around in this deep tunnel,  
+running from everything.
+END
+
+Exit AH-BroodChamber d AH-BroodChamberUnderground
+Exit AH-BroodChamberUnderground u AH-BroodChamber
+
+Room AH-BroodTunnelOne
+Name Alien Hive: Brood Tunnel One
+Description 
+A dark tunnel, a faint glow coming form the North.
+END
+
+Exit AH-BroodTunnelOne s AH-BroodChamberUnderground
+Exit AH-BroodChamberUnderground n AH-BroodTunnelOne
+
+Room AH-BroodTunnelTwo
+Name Alien Hive: Brood Tunnel Two
+Description 
+A tunnel, a glow coming form the North.
+END
+
+Exit AH-BroodTunnelTwo s AH-BroodTunnelOne
+Exit AH-BroodTunnelOne n AH-BroodTunnelTwo
+
+Room AH-BroodTunnelThree
+Name Alien Hive: Brood Tunnel Three
+Description 
+A tunnel, a bright glow coming form the West.
+END
+
+Exit AH-BroodTunnelTwo s AH-BroodTunnelThree
+Exit AH-BroodTunnelThree n AH-BroodTunnelTwo
+
+Room AH-BroodTunnelFour
+Name Alien Hive: Brood Tunnel Four
+Description 
+A tunnel, a blinding glow coming form the South.
+END
+
+Exit AH-BroodTunnelFour e AH-BroodTunnelThree
+Exit AH-BroodTunnelThree w AH-BroodTunnelFour
+
+Room AH-BroodTunnelCave
+Name Alien Hive: Brood Tunnel Cave
+Description 
+A cave. The floor of the cave is illuminating a bliding glow. 
+Your barely make out an item's shape in the middle of the floor.
+END
+
+Exit AH-BroodTunnelFour s AH-BroodTunnelCave
+Exit AH-BroodTunnelCave n AH-BroodTunnelFour
+
+Orb 
+Name Reanimator
+Description 
+An orb of spontaneous regeneration.
+END
+HealthPoints 99
+Location AH-BroodTunnelCave
+
+Room AH
+Name The Hive: The Treacherous Hive
+Description 
+You shouldn't be seeing this!
+END
+
+ADD AH AH-Approach w 
+ADD AH AH-Perimeter
+ADD AH AH-Cathedral
+ADD AH AH-BroodChamber
+ADD AH AH-Queen'sLair
+ADD AH AH-HiddenTrail
+ADD AH AH-BroodChamberUnderground
+ADD AH AH-BroodTunnelOne
+ADD AH AH-BroodTunnelTwo
+ADD AH AH-BroodTunnelThree
+ADD AH AH-BroodTunnelFour
+ADD AH AH-BroodTunnelCave
+
+ADD WorldEntity AH
+
+
+Mobile
+Name Passer By
+Description 
+A local inhabitant.
+END
+Strategy M Passerby walks by attending its business.
+Location CLONE 50

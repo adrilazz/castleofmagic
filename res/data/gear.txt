@@ -1,0 +1,55 @@
+
+Weapon 
+Name Laser Pistol
+Description 
+A clunky old laser pistol; reliable, but ugly.
+END
+Level 1
+Damage 3
+Location BC-CampSquare
+
+Weapon 
+Name Laser Pistol
+Description 
+A clunky old laser pistol; reliable, but ugly.
+END
+Level 1
+Damage 3
+Location BC-CampSquare
+
+
+Armor 
+Name Flak Vest
+Description 
+A sturdy vest meant to protect the wearer's torso.
+END
+Level 2
+Type M
+Location BC-CampSquare
+
+Orb 
+Name Reanimator
+Description 
+An orb of spontaneous regeneration.
+END
+HealthPoints 99
+Location AH-BroodTunnelCave
+
+GearContainer 
+Name Captain's Cabinet
+Description 
+(The captain's gun cabinet.)
+END
+MaxSize 5
+canCarry false
+Location BC-CampSquareBunker
+
+
+
+Orb 
+Name Life Orb
+Description 
+(A health orb, adds 5 hit points when used. Regenerates every 10 seconds. Dropping it would be a bad idea.)
+END
+HealthPoints 99
+Location AH-BroodTunnelCave

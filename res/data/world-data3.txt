@@ -1,0 +1,97 @@
+Room MW
+Name Misty Meadows
+Description 
+You wake up a little dizzy and you can't remember anything, 
+suddenly you hear a voice in the distance.
+END
+
+Mobile
+Name Damian
+Description 
+Short scared man with gray hair and a hat.
+END
+Strategy M Damian: Hey! Someone help me! Please! The princess has been kidnaped! I think they went to the castle.
+Location MW
+
+Room GD
+Name Gate Door
+Description
+After a long walk in the middle of nowhere you finally spot it.
+there is a bridge with lava under it that separates the green field and the scary wooden gate.
+END
+
+Exit MW n GD
+Exit GD s MW
+
+Mobile
+Name Ruth
+Description
+Guardian of gate, woman wearing a black cape and hood holding a sword.
+END
+Strategy M Ruth: Who dares approach the tower?
+Location GD
+
+Room SE
+Name Spooky Entrance
+Description
+A dark room with candles lighting the way.
+there is a metallic latter at the back catches your eye, 
+at your left you find 2 boys blocking the path to what seems like a rock staircase heading to the next floor.
+END
+
+Exit GD n SE
+Exit SE s GD
+
+Mobile
+Name Elden
+Description
+One of the twins, has red hair and is the tallest of both, protects the staircase
+END
+Strategy M Elden
+END
+Location SE
+
+Mobile
+Name Sheldon
+Description
+The other twin, has red hair and is the short one, protects the staircase next to his brother
+Strategy M Sheldon
+END
+Location SE
+
+Room DD
+Name Dark Dungeon
+Description 
+A flickering light bulb on the ceiling allows us to see cells, most of them are empty but you
+see something move in the right, it seems to be that someone is there
+you approach it slowly.
+END
+
+Exit SE w DD
+Exit DD e SE
+
+Mobile
+Name Gunter
+Description 
+A man with fair skin wearing a purple jumper with yellow pants and hiding behind what seems to be a weapon
+Strategy M Gunter:  Who's there?? Not the twins again, Please!.
+END
+Location DD
+
+Room SD
+Name Sinister Dining
+Description 
+The room is decorated with big paintings, there's a dining table in the center of it with a chandelier 
+hanging from the ceiling.
+END
+
+Exit DD u SD
+Exit SD d DD
+
+Mobile
+Name Ludwig
+Description 
+A blonde middle aged man wearing a suit
+Strategy M Ludwig: Please, Have a seat.
+END
+Location SD
